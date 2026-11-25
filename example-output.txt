@@ -1,0 +1,27 @@
+
+=== FCFS ===
+Gantt: | P1 0-5 | P2 5-8 | P3 8-9 | P4 9-11 |
+Process       Finish    Turnaround     Waiting    Response
+P1                 5             5           0           0
+P2                 8             7           4           4
+P3                 9             7           6           6
+P4                11             8           6           6
+Average turnaround: 6.75
+Average waiting:    4.00
+Average response:   4.00
+
+=== RR (q = 2) ===
+Gantt: | P1 0-2 | P2 2-4 | P3 4-5 | P1 5-7 | P4 7-9 | P2 9-10 | P1 10-11 |
+Process       Finish    Turnaround     Waiting    Response
+P1                11            11           6           0
+P2                10             9           6           1
+P3                 5             3           2           2
+P4                 9             6           4           4
+Average turnaround: 7.25
+Average waiting:    4.50
+Average response:   1.75
+
+=== Comparison (lower is better) ===
+Turnaround: FCFS is better (FCFS 6.75, RR 7.25)
+Waiting: FCFS is better (FCFS 4.00, RR 4.50)
+Response: RR is better (FCFS 4.00, RR 1.75)
